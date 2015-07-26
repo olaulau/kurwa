@@ -1,3 +1,4 @@
+/* This is a compiled file, you should be editing the file in the templates directory */
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -11,7 +12,7 @@
 }
 
 .pace .pace-progress {
-  background: #dd4922;
+  background: #7c60e0;
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -26,7 +27,7 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #dd4922, 0 0 5px #dd4922;
+  box-shadow: 0 0 10px #7c60e0, 0 0 5px #7c60e0;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -moz-transform: rotate(3deg) translate(0px, -4px);
@@ -44,8 +45,8 @@
   width: 14px;
   height: 14px;
   border: solid 2px transparent;
-  border-top-color: #dd4922;
-  border-left-color: #dd4922;
+  border-top-color: #7c60e0;
+  border-left-color: #7c60e0;
   border-radius: 10px;
   -webkit-animation: pace-spinner 400ms linear infinite;
   -moz-animation: pace-spinner 400ms linear infinite;

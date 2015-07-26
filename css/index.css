@@ -1,5 +1,13 @@
 @CHARSET "UTF-8";
 
+
+html { 
+	background: url(../polska.jpg) no-repeat center center fixed; 
+	background-size: cover;
+	background-color: grey;
+}
+
+
 video {
 	position: fixed;
 	top: 50%;
