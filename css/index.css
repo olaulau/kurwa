@@ -2,22 +2,24 @@
 
 
 html { 
-	background: url(../polska.jpg) no-repeat center center fixed; 
+/* 	background: url(../polska.jpg) no-repeat center center fixed; */
 	background-size: cover;
 	background-color: grey;
 }
 
 
 video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);	
+	max-width: 80%;
+	max-height: 80%;
+/* 	position: fixed; */
+/* 	top: 50%; */
+/* 	left: 50%; */
+/* 	min-width: 100%; */
+/* 	min-height: 100%; */
+/* 	width: auto; */
+/* 	height: auto; */
+/* 	-webkit-transform: translateX(-50%) translateY(-50%); */
+/* 	transform: translateX(-50%) translateY(-50%);	 */
 /*	
 	background: url(polina.jpg) no-repeat;
 	background-size: cover;
