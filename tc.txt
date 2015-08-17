@@ -1,0 +1,17 @@
+-> http://stackoverflow.com/a/615757/1248801
+
+==> https://coderwall.com/p/zpckbg/simulate-a-slow-network-with-high-latency-on-your-localhost
+
+
+sudo tc qdisc add dev lo root handle 1: htb default 12
+sudo tc class add dev lo parent 1:1 classid 1:12 htb rate 512kbps ceil 1024kbps
+sudo tc qdisc add dev lo parent 1:12 netem delay 100ms
+
+
+
+TC remove : 
+tc qdisc del dev lo root
+
+
+TC show :
+tc qdisc show
