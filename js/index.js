@@ -1,10 +1,14 @@
 $(function() {
-	var debug_mode = true;
+	var debug_mode = false;
+	debug_mode = true;
 	
 	var video = $('video#kurwa_video');
 	var video_ = video.get(0);
 	
 	if(debug_mode) video_.muted = true;
+	if(debug_mode) video_.controls = true;
+	if(debug_mode) video_.loop = false;
+	
 	video.hide();
 //	video_.play(); // needed for Firefox to start loading the video
 //	video_.pause();
