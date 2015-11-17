@@ -13,10 +13,12 @@
 </head>
 <body>
 	
-	<video id="kurwa_video" controls muted src="nasdrovia.mp4?time=<?= time() ?>" preload="auto"  >Kurwa !</video>
-<!-- 	autoplay="true" -->
-<!-- 	loop -->
-<!-- 	poster="image.jpg" -->
+	<video id="kurwa_video" src="nasdrovia.mp4?time=<?= time() ?>" controls preload="auto" >Kurwa !</video>
+	<!-- 	
+		autoplay="true"
+		loop
+		poster="image.jpg"
+	-->
 	
 </body>
 </html>
