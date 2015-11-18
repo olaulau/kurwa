@@ -15,7 +15,7 @@
 		<div class="top_half">
 			<div class="width_chooser">
 				<div class="image_container">
-					<img src="./media/Herb_Polski.svg"/>
+					<!-- <img src="./media/Herb_Polski.svg" class="Herb_Polski" /> -->
 				</div>
 			</div>
 		</div>
