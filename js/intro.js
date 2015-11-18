@@ -4,19 +4,16 @@ debug_mode = true;
 
 $( document ).ready(function() {
     if(debug_mode) console.log( "document ready" );
+    
+    $("#fullscreen").click(function(){
+    	if(debug_mode) console.log( "go click" );
+    	launchIntoFullscreen($("body")[0]);
+    });
 });
 
 
 $( window ).load(function() {
 	if(debug_mode) console.log( "window loaded" );
-	
-	var body = $("body");
-	var body_ = body[0];
-	launchIntoFullscreen(body_);
-
-	$(".image_container").append('<img src="./media/Herb_Polski.svg" class="Herb_Polski" />');
-	$(".Herb_Polski").show();
-	$(".Herb_Polski").addClass('Herb_Polski_fadein');
 });
 
 

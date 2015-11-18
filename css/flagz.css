@@ -19,6 +19,7 @@ html, body {
 }
 
 body {
+	background-color: black;
 /* 	filter: grayscale(0.5) blur(10px); */
 }
 
