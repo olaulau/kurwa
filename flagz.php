@@ -10,14 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="css/flagz.css" media="all"/>
 </head>
 <body>
-	<div class="top_half">
-		<div class="width_chooser">
-			<div class="image_container">
-				<img src="./media/Herb_Polski.svg"/>
+	
+	<div class="whole_screen">
+		<div class="top_half">
+			<div class="width_chooser">
+				<div class="image_container">
+					<img src="./media/Herb_Polski.svg"/>
+				</div>
 			</div>
 		</div>
 	</div>
+	
 </body>
 </html>
-
-<!-- 			<img src="./media/Herb_Polski.svg"/> -->
