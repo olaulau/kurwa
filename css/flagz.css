@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+
+html { 
+	background: url('../media/Flag_of_Poland.svg') no-repeat center center fixed;
+	background-size: cover;
+	background-color: grey;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+video {
+	max-width: 80%;
+	max-height: 80%;
+	
+/* 	position: fixed; */
+/* 	top: 50%; */
+/* 	left: 50%; */
+/* 	min-width: 100%; */
+/* 	min-height: 100%; */
+/* 	width: auto; */
+/* 	height: auto; */
+/* 	-webkit-transform: translateX(-50%) translateY(-50%); */
+/* 	transform: translateX(-50%) translateY(-50%);	 */
+/*	
+	background: url(polina.jpg) no-repeat;
+	background-size: cover;
+*/
+}
+
+.top_half {
+	width: 100%;
+	height: 50%;
+/* 	border: 2px dotted grey; */
+}
+
+.width_chooser {
+	min-width: 10%;
+	max-width: 20%;
+/* 	border: 2px dotted grey; */
+	margin: auto;
+	
+	/* vertical center */
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.image_container {
+	/* fixed aspect ratio */ 
+	width: 100%;
+	padding-bottom: 100%; /* 1:1 */
+/* 	background: yellow; */
+}
+
+.image_container > img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
