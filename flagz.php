@@ -12,10 +12,12 @@
 <body>
 	
 	<div class="whole_screen">
-		<div class="top_half">
-			<div class="width_chooser">
-				<div class="image_container">
-					<!-- <img src="./media/Herb_Polski.svg" class="Herb_Polski" /> -->
+		<div class="flag">
+			<div class="top_half">
+				<div class="width_chooser">
+					<div class="image_container">
+						<!-- <img src="./media/Herb_Polski.svg" class="Herb_Polski" /> -->
+					</div>
 				</div>
 			</div>
 		</div>
