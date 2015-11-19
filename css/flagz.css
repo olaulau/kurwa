@@ -65,19 +65,3 @@ body {
 	position: absolute;
 	display: none;
 }
-
-/* The animation code */
-@keyframes Herb_Polski_anim {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-/* The element to apply the animation to */
-.Herb_Polski_fadein {
-    animation-name: Herb_Polski_anim;
-    animation-duration: 0.75s;
-    animation-timing-function: ease-in-out;
-/*     animation-delay: 1s; */
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-} 

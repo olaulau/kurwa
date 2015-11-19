@@ -10,13 +10,12 @@ $( document ).ready(function() {
 $( window ).load(function() {
 	if(debug_mode) console.log( "window loaded" );
 	
-	var body = $("body");
-	var body_ = body[0];
-	launchIntoFullscreen(body_);
-
+	if(!debug_mode)launchIntoFullscreen($("body")[0]);
 	$(".image_container").append('<img src="./media/Herb_Polski.svg" class="Herb_Polski" />');
+	$(".Herb_Polski").css("opacity", "0");
 	$(".Herb_Polski").show();
-	$(".Herb_Polski").addClass('Herb_Polski_fadein');
+	$(".Herb_Polski").animate({opacity: "1"}, 1000, "swing", function(){ alert("stoi") });
+	
 });
 
 
