@@ -5,9 +5,9 @@
 	<title>K U R W A</title>
 	
 	<script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/flagz.js"></script>
+	<script type="text/javascript" src="js/flag1.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/flagz.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="css/flag1.css" media="all"/>
 </head>
 <body>
 	

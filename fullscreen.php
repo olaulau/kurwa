@@ -5,9 +5,9 @@
 	<title>K U R W A</title>
 	
 	<script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/intro.js"></script>
+	<script type="text/javascript" src="js/fullscreen.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/intro.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="css/fullscreen.css" media="all"/>
 </head>
 <body>
 	

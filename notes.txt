@@ -1,0 +1,13 @@
+scenario :
+- loading
+=> nuclear loading animation ?
+- polish national anthem
+=> when loading is fully finished
+- go screen
+=> fullscreen
+- html flag + svg
+=> very fast blinking (stroboscopic) + progressive arrival of trash flag
+- jpg trash flag
+=> when anthem is finished
+- nasdrovia video
+=> endlessly

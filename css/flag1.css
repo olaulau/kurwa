@@ -34,10 +34,10 @@ body {
 	background: url('../media/Flag_of_Poland.svg') no-repeat center center fixed;
 	background-size: contain;
 	
-	width: 100vw; 
-    height: 62.5vw; /* height:width ratio = 10/16 = .625  */
+	width: 100vw;
+    height: 56.25vw; /* height:width ratio = 10/16 = .625  */
     max-height: 100vh;
-    max-width: 160vh; /* 16/10 = 1.6 */
+    max-width: 177.78vh; /* 16/10 = 1.6 */
     margin: auto;
     position: absolute;
     top: 0; bottom:0; /* vertical center */
@@ -51,8 +51,9 @@ body {
 }
 
 .width_chooser {
-	min-width: 15%;
-	max-width: 25%;
+/* 	min-width: 15%; */
+/* 	max-width: 25%; */
+	width: 22%;
 /* 	border: 2px dotted grey; */
 
 	/* horizontal center */
@@ -60,7 +61,7 @@ body {
 	
 	/* vertical center */
 	position: relative;
-	top: 50%;
+	top: 55%;
 	transform: translateY(-50%);
 }
 
