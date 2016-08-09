@@ -1,14 +1,26 @@
 @CHARSET "UTF-8";
 
 html {
-/* 	filter: sepia(100%); */
-/* 	filter: saturate(3%); */
-/* 	filter: opacity(50%); */
-/* 	filter: invert(80%); */
-/* 	filter: hue-rotate(180deg) ; */
-/* 	filter: contrast(200%) brightness(0.5); */
-	filter: grayscale(0.5) blur(/*1*/0px);
-/* 	-webkit-filter: grayscale(0.5) blur(10px); */
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+}
+
+@keyframes bluur {
+    from {
+    	filter: blur(2px);
+    	-webkit-filter: blur(2px);
+    }
+    to {
+    	filter: blur(4px);
+    	-webkit-filter: blur(4px);
+    }
+}
+
+.bluur-anim {
+	animation-name: bluur;
+	animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 html, body {
@@ -20,7 +32,6 @@ html, body {
 
 body {
 	background-color: black;
-/* 	filter: grayscale(0.5) blur(10px); */
 }
 
 .whole_screen {
@@ -28,7 +39,7 @@ body {
 	height: 100%;
 }
 
-.flag {
+.flag1 {
 /* 	background-color: grey; */
 /* 	border: blue 3px dashed; */
 	background: url('../media/Flag_of_Poland.svg') no-repeat center center fixed;
@@ -42,6 +53,24 @@ body {
     position: absolute;
     top: 0; bottom:0; /* vertical center */
     left: 0; right:0; /* horizontal center */
+    z-index: 0;
+}
+
+.flag2 {
+/* 	background-color: grey; */
+/* 	border: blue 3px dashed; */
+	background: url('../media/polska.jpg') no-repeat center center fixed;
+	background-size: contain;
+	
+	width: 100vw;
+    height: 56.25vw; /* height:width ratio = 10/16 = .625  */
+    max-height: 100vh;
+    max-width: 177.78vh; /* 16/10 = 1.6 */
+    margin: auto;
+    position: absolute;
+    top: 0; bottom:0; /* vertical center */
+    left: 0; right:0; /* horizontal center */
+    z-index: -1;
 }
 
 .top_half {

@@ -10,7 +10,7 @@ $( document ).ready(function() {
 $( window ).load(function() {
 	if(debug_mode) console.log( "window loaded" );
 	
-	if(!debug_mode)launchIntoFullscreen($("body")[0]);
+	if(!debug_mode) launchIntoFullscreen($("body")[0]);
 	
 });
 

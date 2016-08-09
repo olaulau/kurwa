@@ -1,0 +1,4 @@
+- video
+	- video buffering isn't counted with pace loader. but our JS is tracking it. 2 solutions :
+		- make a second loader
+		- or juste use pace loader with values from video loading in our JS

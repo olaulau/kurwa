@@ -5,14 +5,14 @@
 	<title>K U R W A</title>
 	
 	<script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/flag1.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/flag1.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css" media="all"/>
 </head>
 <body>
 	
 	<div class="whole_screen">
-		<div class="flag">
+		<div class="flag1">
 			<div class="top_half">
 				<div class="width_chooser">
 					<div class="image_container">
@@ -20,6 +20,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		
+		<div class="flag2">
+			
 		</div>
 	</div>
 	

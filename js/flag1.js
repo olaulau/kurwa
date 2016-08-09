@@ -10,11 +10,9 @@ $( document ).ready(function() {
 $( window ).load(function() {
 	if(debug_mode) console.log( "window loaded" );
 	
-	if(!debug_mode)launchIntoFullscreen($("body")[0]);
+	if(!debug_mode) launchIntoFullscreen($("body")[0]);
 	
 	
-	$(".image_container").append('<img src="./media/Herb_Polski.svg" class="Herb_Polski" />');
-	$(".Herb_Polski").css("opacity", "0");
 	$(".Herb_Polski").show();
 	$(".Herb_Polski").animate({opacity: "1"}, 1000, "swing", afterFlag);
 	

@@ -13,9 +13,7 @@
 	
 	<div class="whole_screen">
 		<div class="flag">
-			<div class="top_half">
-				
-			</div>
+			
 		</div>
 	</div>
 	
