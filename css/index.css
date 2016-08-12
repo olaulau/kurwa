@@ -39,7 +39,7 @@ body {
 	height: 100%;
 }
 
-.flag1 {
+#flag1 {
 /* 	background-color: grey; */
 /* 	border: blue 3px dashed; */
 	background: url('../media/Flag_of_Poland.svg') no-repeat center center fixed;
@@ -56,7 +56,7 @@ body {
     z-index: 0;
 }
 
-.flag2 {
+#flag2 {
 /* 	background-color: grey; */
 /* 	border: blue 3px dashed; */
 	background: url('../media/polska.jpg') no-repeat center center fixed;
@@ -108,3 +108,4 @@ body {
 	display: none;
 	opacity: 0;
 }
+

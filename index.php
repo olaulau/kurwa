@@ -12,7 +12,7 @@
 <body>
 	
 	<div class="whole_screen">
-		<div class="flag1">
+		<div id="flag1">
 			<div class="top_half">
 				<div class="width_chooser">
 					<div class="image_container">
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		
-		<div class="flag2">
+		<div id="flag2">
 			
 		</div>
 	</div>
