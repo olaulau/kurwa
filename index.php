@@ -12,6 +12,16 @@
 <body>
 	
 	<div class="whole_screen">
+		
+		<div id="go_fullscreen" class="central_container">
+			<button id="fullscreen">G O</button>
+		</div>
+		
+		<div id="curtains" class="whole_screen">
+			<div id="curtain-left" class="curtain"></div>
+			<div id="curtain-right" class="curtain"></div>
+		</div>
+		
 		<div id="flag1">
 			<div class="top_half">
 				<div class="width_chooser">

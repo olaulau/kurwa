@@ -39,6 +39,56 @@ body {
 	height: 100%;
 }
 
+.central_container {
+	width: 100%;
+
+	/* horizontal center */
+	text-align: center;
+	
+	/* vertical center */
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+#go_fullscreen {
+	position absolute;
+	z-index: 2;
+}
+#fullscreen {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 40px;
+	color: grey;
+	background-color: black;
+	border: none;
+	position absolute;
+	z-index: 2;
+}
+
+
+#curtains {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	z-index: 1;
+}
+.curtain {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	z-index: 1;
+}
+#curtain-left {
+	left: 0%;
+}
+#curtain-right {
+	right: 0%;
+}
+
+
 #flag1 {
 /* 	background-color: grey; */
 /* 	border: blue 3px dashed; */

@@ -1,10 +1,13 @@
+/* variables */
 var debug_mode = false;
-debug_mode = true; // uncomment to show debug lines in console
+debug_mode = true; // uncomment to show debug rows in console
 
 var animation_speed_ratio = 1;
-animation_speed_ratio = 2; // uncomment to speed up during dev 
+//animation_speed_ratio = 2; // uncomment to speed up animations
 
 
+
+/* jquery boot */
 $( document ).ready(function() {
     if(debug_mode) console.log( "document ready" );
 });
@@ -15,12 +18,95 @@ $( window ).load(function() {
 	
 	if(!debug_mode) launchIntoFullscreen($("body")[0]);
 	
-	step_1();
+	step_0_0();
+//	step_1_0();
 });
 
 
 
+/* animation steps */
+function step_0_0() {
+	if(debug_mode) console.log( "step 0_0 : display go fullscreen button" );
+	$("#go_fullscreen").css("z-index", "5");
+	$("#go_fullscreen").click(function(){
+		launchIntoFullscreen($("body")[0]);
+		$("#go_fullscreen").remove();
+		setTimeout(step_0_1, 500);
+	});
+	
+}
 
+function step_0_1() {
+	if(debug_mode) console.log( "step 0_1 : curtains openning " );
+	$(".curtain").animate({"width": "0%"}, 3000, "swing", step_0_2);
+//	$("#curtain-left").animate({"left": "-50%"}, 3000, "swing");
+//	$("#curtain-right").animate({"right": "-50%"}, 3000, "swing", step_0_2);
+}
+
+function step_0_2() {
+	if(debug_mode) console.log( "step 0_2 : " );
+	$("#curtains").remove();
+	step_1_0();
+}
+
+
+function step_1_0() {
+	if(debug_mode) console.log( "step 1_0 : flag1 waiting before start" );
+	setTimeout(step_1_1, 1000/animation_speed_ratio);
+}
+
+function step_1_1() {
+	if(debug_mode) console.log( "step 1_1 : herb polski showing" );
+	$(".Herb_Polski").show();
+	$(".Herb_Polski").animate({opacity: "1"}, 2000/animation_speed_ratio, "swing", step_2_0);
+}
+
+
+function step_2_0() {
+	if(debug_mode) console.log( "step 2_0 : color appearance" );
+	$("html")
+		.css("filter", "grayscale(0)")
+		.css("-webkit-filter", "grayscale(0)")
+		.css('transition', 'all 2s ease-out');
+	setTimeout(step_2_1, 2000/animation_speed_ratio);
+}
+
+function step_2_1() {
+	if(debug_mode) console.log( "step 2_1 : start of flag2 animation" );
+	animBlur(".whole_screen", 0, 4, 1000/animation_speed_ratio, step_2_2);
+}
+
+function step_2_2() {
+	if(debug_mode) console.log( "step 2_2 : transition to flag2" );
+	$("#flag1").animate({"opacity": "0"}, 8000/animation_speed_ratio, 'swing');
+	$(".whole_screen").addClass("bluur-anim");
+	setTimeout(step_2_3, 8000/animation_speed_ratio);
+	
+}
+
+function step_2_3() {
+	if(debug_mode) console.log( "step 2_3 : end of flag2 animation" );
+	$(".whole_screen").removeClass("bluur-anim");
+	$(".whole_screen").css("filter", "blur(2px)");
+	$(".whole_screen").css("-webkit-filter", "blur(2px)");
+	
+	$("#flag1").remove();
+	animBlur(".whole_screen", 4, 0, 1000/animation_speed_ratio, step_3_0);
+}
+
+
+function step_3_0() {
+	if(debug_mode) console.log( "step 3_0 : " );
+	setTimeout(step_3_1, /*100*/0/animation_speed_ratio);
+}
+
+function step_3_1() {
+	if(debug_mode) console.log( "step 3_1 : " );
+}
+
+
+
+/* others functions */
 function launchIntoFullscreen(element) {
 	if (element.requestFullscreen) {
 		element.requestFullscreen();
@@ -32,58 +118,6 @@ function launchIntoFullscreen(element) {
 		element.msRequestFullscreen();
 	}
 }
-
-function step_1() {
-	if(debug_mode) console.log( "step 1" );
-	
-	setTimeout(step_1_1, 1000/animation_speed_ratio);
-}
-
-function step_1_1() {
-	if(debug_mode) console.log( "step 1_1" );
-	
-	$(".Herb_Polski").show();
-	$(".Herb_Polski").animate({opacity: "1"}, 2000/animation_speed_ratio, "swing", step_2);
-}
-
-
-function step_2() {
-	if(debug_mode) console.log( "step 2" );
-	$("html")
-		.css("filter", "grayscale(0)")
-		.css("-webkit-filter", "grayscale(0)")
-		.css('transition', 'all 2s ease-out');
-	setTimeout(step_2_1, 2000/animation_speed_ratio);
-}
-
-function step_2_1() {
-	if(debug_mode) console.log( "step 2_1" );
-	$("#flag1").animate({"opacity": "0"}, 8000/animation_speed_ratio, 'swing');
-	$(".whole_screen").addClass("bluur-anim");
-	setTimeout(step_2_2, 8000/animation_speed_ratio);
-	
-}
-
-function step_2_2() {
-	if(debug_mode) console.log( "step 2_2" );
-	$(".whole_screen").removeClass("bluur-anim");
-	$(".whole_screen").css("filter", "blur(2px)");
-	$(".whole_screen").css("-webkit-filter", "blur(2px)");
-	
-	animBlur(".whole_screen", 4, 0, 1000/animation_speed_ratio, step_3);
-}
-
-
-function step_3() {
-	if(debug_mode) console.log( "step 3" );
-	setTimeout(step_3_1, /*100*/0/animation_speed_ratio);
-}
-
-function step_3_1() {
-	if(debug_mode) console.log( "step 3_1" );
-}
-
-
 
 
 function animBlur(selector, from, to, duration, complete) {
