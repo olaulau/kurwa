@@ -22,6 +22,8 @@
 			<div id="curtain-right" class="curtain"></div>
 		</div>
 		
+		<audio id="mazurek-dabrowskiego" src="media/MazurekDabrowskiego.mp3?time=<?= time() ?>" loop preload="auto"></audio>
+		
 		<div id="flag1">
 			<div class="top_half">
 				<div class="width_chooser">

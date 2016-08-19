@@ -5,11 +5,20 @@ debug_mode = true; // uncomment to show debug rows in console
 var animation_speed_ratio = 1;
 //animation_speed_ratio = 2; // uncomment to speed up animations
 
+var audio;
+var audio_;
+
 
 
 /* jquery boot */
 $( document ).ready(function() {
     if(debug_mode) console.log( "document ready" );
+    
+    audio = $("audio#mazurek-dabrowskiego");
+    audio_ = audio.get(0);
+    if(debug_mode) audio_.muted = true;
+	if(debug_mode) audio_.controls = true;
+	if(debug_mode) audio_.loop = false;
 });
 
 
@@ -34,14 +43,20 @@ function step_0_0() {
 }
 
 function step_0_1() {
-	if(debug_mode) console.log( "step 0_1 : curtains openning " );
-	$(".curtain").animate({"width": "0%"}, 3000, "swing", step_0_2);
-//	$("#curtain-left").animate({"left": "-50%"}, 3000, "swing");
-//	$("#curtain-right").animate({"right": "-50%"}, 3000, "swing", step_0_2);
+	if(debug_mode) console.log( "step 0_1 : anthem playing " );
+	audio_.play();
+	step_0_2();
 }
 
+
 function step_0_2() {
-	if(debug_mode) console.log( "step 0_2 : curtains remove" );
+	if(debug_mode) console.log( "step 0_2 : curtains openning " );
+	$(".curtain").animate({"width": "0%"}, 3000, "swing");
+	setTimeout( step_0_3, 3000);
+}
+
+function step_0_3() {
+	if(debug_mode) console.log( "step 0_3 : curtains remove" );
 	$("#curtains").remove();
 	step_1_0();
 }
@@ -93,8 +108,12 @@ function step_2_3() {
 
 
 function step_3_0() {
-	if(debug_mode) console.log( "step 3_0 : " );
-	setTimeout(step_3_1, /*100*/0/animation_speed_ratio);
+	if(debug_mode) console.log( "step 3_0 : ending anthem" );
+	
+	audio.animate({volume: 0}, 2000, function () {
+		audio_.pause();
+		step_3_1();
+    });
 }
 
 function step_3_1() {
