@@ -15,11 +15,8 @@ $( document ).ready(function() {
 
 $( window ).load(function() {
 	if(debug_mode) console.log( "window loaded" );
-	
 	if(!debug_mode) launchIntoFullscreen($("body")[0]);
-	
 	step_0_0();
-//	step_1_0();
 });
 
 
@@ -44,7 +41,7 @@ function step_0_1() {
 }
 
 function step_0_2() {
-	if(debug_mode) console.log( "step 0_2 : " );
+	if(debug_mode) console.log( "step 0_2 : curtains remove" );
 	$("#curtains").remove();
 	step_1_0();
 }
@@ -64,7 +61,7 @@ function step_1_1() {
 
 function step_2_0() {
 	if(debug_mode) console.log( "step 2_0 : color appearance" );
-	$("html")
+	$(".whole_screen")
 		.css("filter", "grayscale(0)")
 		.css("-webkit-filter", "grayscale(0)")
 		.css('transition', 'all 2s ease-out');
@@ -73,7 +70,7 @@ function step_2_0() {
 
 function step_2_1() {
 	if(debug_mode) console.log( "step 2_1 : start of flag2 animation" );
-	animBlur(".whole_screen", 0, 4, 1000/animation_speed_ratio, step_2_2);
+	animBlur(".whole_screen", 0, 2, 250/animation_speed_ratio, step_2_2);
 }
 
 function step_2_2() {
@@ -91,7 +88,7 @@ function step_2_3() {
 	$(".whole_screen").css("-webkit-filter", "blur(2px)");
 	
 	$("#flag1").remove();
-	animBlur(".whole_screen", 4, 0, 1000/animation_speed_ratio, step_3_0);
+	animBlur(".whole_screen", 2, 0, 250/animation_speed_ratio, step_3_0);
 }
 
 
